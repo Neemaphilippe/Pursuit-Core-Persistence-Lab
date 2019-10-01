@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jWa-38-Ia0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jWa-38-Ia0" customClass="PhotoCell" customModule="PersistenceLab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -42,6 +42,9 @@
                                             </subviews>
                                         </view>
                                         <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="photoImage" destination="MDK-uT-hyR" id="9t0-Rx-lq5"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -65,15 +68,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="O0H-9d-Tpx"/>
+                    <connections>
+                        <outlet property="photoSearchBar" destination="zDB-bk-ztJ" id="IMZ-ab-QmG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="9AA-Ku-UXd">
             <objects>
-                <viewController id="OOD-n0-IFD" sceneMemberID="viewController">
+                <viewController id="OOD-n0-IFD" customClass="DetailViewController" customModule="PersistenceLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Odi-sB-Qhw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +122,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JJz-gn-gRC"/>
                     </view>
+                    <connections>
+                        <outlet property="detailDescription" destination="3gF-yB-6mL" id="6Gn-qv-3g2"/>
+                        <outlet property="detailImage" destination="6GO-MM-LGd" id="QTs-nW-YEK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9e-8S-eUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,7 +134,7 @@
         <!--Item-->
         <scene sceneID="xe5-Qd-WSK">
             <objects>
-                <viewController id="K5S-lu-GXs" sceneMemberID="viewController">
+                <viewController id="K5S-lu-GXs" customClass="FavoritesViewController" customModule="PersistenceLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7h1-hw-WdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,6 +154,9 @@
                         <viewLayoutGuide key="safeArea" id="4th-qi-pCe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Gex-Ad-cZe"/>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="2Oq-Mb-tSF" id="Amr-Pb-p6U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoK-ap-0JK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
